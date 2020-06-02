@@ -14,5 +14,5 @@
             <td>{{ $task->content }}</td>
         </tr>
     </table>
-
+       {!! link_to_route('tasks.create', 'タスクの編集', [], ['class' => 'btn btn-primary']) !!}
 @endsection
