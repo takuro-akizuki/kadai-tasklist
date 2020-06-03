@@ -13,6 +13,9 @@
             <th>タスク</th>
             <td>{{ $task->content }}</td>
         </tr>
-    </table>
-       {!! link_to_route('tasks.create', 'タスクの編集', [], ['class' => 'btn btn-primary']) !!}
+    </table>               
+    {!! link_to_route('tasks.edit', 'タスクを編集', ['task' => $task->id], ['class' => 'btn btn-primary']) !!}
+    {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
+        {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
+    {!! Form::close() !!}
 @endsection
