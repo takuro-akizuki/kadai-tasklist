@@ -8,6 +8,7 @@
         <tr>
             <th>id</th>
             <td>{{ $task->id }}</td>
+            <th>ステータス</th>
         </tr>
         <tr>
             <th>タスク</th>
