@@ -6,15 +6,17 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>id</th>
+            <td>id</td>
             <td>{{ $task->id }}</td>
-            <th>ステータス</th>
         </tr>
         <tr>
             <th>タスク</th>
             <td>{{ $task->content }}</td>
-            <td>{{ $task->status }}</td>
         </tr>
+        <tr>
+            <th>ステータス</th>
+            <td>{{ $task->status }}</td>
+        </tr>    
     </table>               
     {!! link_to_route('tasks.edit', 'タスクを編集', ['task' => $task->id], ['class' => 'btn btn-primary']) !!}
     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
